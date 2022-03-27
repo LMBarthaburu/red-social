@@ -1,0 +1,11 @@
+:root{
+  --color-principal: #5D4E8E;
+  --color-segundario: #7B77C2;
+  --color-terciario: #B09DCE;
+  --color-logo:  #FFE600;
+  --color-letra: #ffffff;
+}
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
+*{
+  font-family:'Inter', sans-serif;
+}
