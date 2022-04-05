@@ -133,7 +133,8 @@ header{
   border-width: 1px;
   border-radius: 10px;
   background-color: #B09DCE;
-  margin: 5px;
+  margin-top: 5px;
+  margin-bottom: 5px;
 }
 
 .image-perfil{
