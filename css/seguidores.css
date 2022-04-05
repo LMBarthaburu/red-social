@@ -78,7 +78,7 @@ header{
 }
 .columna2{
   background-color: var(--color-segundario);
-  height: 300vh;
+  height: 180vh;
   box-shadow: 1px 1px 2px 0px rgba(0,0,0,0.5);
   border-radius: 10px;
   padding: 8px;
@@ -126,6 +126,21 @@ header{
 /* SEGUIDORES */
 
 .cards-seguidores{
-  color: #161a1d;
-  background-color: aliceblue;
+  background-color: #7B77C2;
+}
+
+.card-followers{
+  border-width: 1px;
+  border-radius: 10px;
+  background-color: #B09DCE;
+  margin: 5px;
+}
+
+.image-perfil{
+  border-radius: 75px;
+  max-width: 100px;
+}
+
+.nombre-usuario{
+  font-size: small;
 }
