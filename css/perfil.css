@@ -87,7 +87,42 @@ header{
   border-radius: 10px;
   padding: 8px;
 }
-
+.input-publicacion{
+  width: 100%;
+  background-color: var(--color-terciario);
+  padding: 10px;
+  border-radius: 10px;
+}
+.input-text{
+  width: 85%;
+  border: none;
+  background-color: transparent;
+  color: var(--color-letra);
+  resize: none;
+}
+.input-text:focus{
+  border: none;
+  outline: none;
+}
+.btn-publicacion{
+  background-color: transparent;
+  border: none;
+  font-weight: bold;
+  color: var(--color-logo);
+}
+.btn-publicacion:hover{
+  opacity: 0.7;
+}
+.text{
+  overflow-wrap: break-word;
+}
+.publicacion-nueva{
+  background-color: var(--color-terciario);
+  border-radius: 10px;
+}
+.fecha-hora{
+  font-size: 12px;
+}
 
 
 
