@@ -15,3 +15,10 @@ closeMenu=()=>{
   menu.classList.add('d-lg-none')
   menu.classList.remove('d-lg-flex')
 }
+
+const usersApi = async () => {
+  const urlApi = await fetch('https://randomuser.me/api/')
+  const jsonUsersApi = await urlApi.json()
+  console.log(jsonUsersApi.results)
+}
+usersApi()
