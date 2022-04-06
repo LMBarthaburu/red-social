@@ -78,7 +78,6 @@ header{
 }
 .columna2{
   background-color: var(--color-segundario);
-  height: 300vh;
   box-shadow: 1px 1px 2px 0px rgba(0,0,0,0.5);
   border-radius: 10px;
   padding: 8px;
