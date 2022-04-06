@@ -115,3 +115,42 @@ header{
     font-size: 10px;
   }
 }
+
+.perfil-style{
+  padding: 5px;
+  border-radius: 100%;
+  height: 180px;
+  width: 180px;
+  
+}
+
+.containerSeguidos{
+  padding-right: 45px;
+}
+
+
+
+
+
+@media (max-width: 576px) {
+  .containerSeguidos{
+    display: none;
+  }
+  
+  .containerInfo{
+    padding: 30px;
+  }
+ 
+}
+
+@media (min-width: 577px) and (max-width: 992px) {
+  
+  .containerSeguidos{
+    display: none;
+  }
+
+  .containerInfo{
+    padding: 30px;
+  }
+  
+}
