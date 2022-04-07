@@ -17,8 +17,13 @@ closeMenu=()=>{
 }
 
 const usersApi = async () => {
-  const urlApi = await fetch('https://randomuser.me/api/')
-  const jsonUsersApi = await urlApi.json()
+  const urlApi = await fetch('https://randomuser.me/api/');
+  const jsonUsersApi = await urlApi.json();
   console.log(jsonUsersApi.results)
 }
 usersApi()
+
+// const datosApi = () => {
+//   const userName = getElementById('user-name');
+  
+// }
