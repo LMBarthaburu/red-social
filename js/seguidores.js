@@ -23,4 +23,3 @@ const usersApi = async () => {
 }
 usersApi()
 
-
