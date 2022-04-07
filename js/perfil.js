@@ -53,7 +53,7 @@ crearPublicacion=()=>{
       <div class="p-2">
         <div class="d-flex">
           <div class="mx-3">
-            <img src="https://www.dzoom.org.es/wp-content/uploads/2020/02/portada-foto-perfil-redes-sociales-consejos-810x540.jpg" alt="" class="nav-img" >
+            <img src="/img/Imagen-de-perfil.jpg" alt="Imagen de perfil" class="nav-img" >
           </div>
           <div class="w-75">
             <h3 class="card-title">Card title</h3>
