@@ -10,3 +10,79 @@
   font-family:'Inter', sans-serif;
   color: var(--color-letra);
 }
+
+body{
+  background: var(--color-principal);
+}
+.logo-login{
+  background-position: center center;
+}
+.caja-login{
+  background: var(--color-segundario);
+  border-radius: 25px;
+}
+.boton-login{
+  background-color: var(--color-principal);
+  color: var(--color-letra);
+  border-radius: 15px;
+}
+.boton-login:hover{
+  color: var(--color-letra);
+}
+.entrada-login{
+  background: var(--color-terciario);
+  border: none;
+  border-radius: 6px;
+}
+.entrada-login:focus{
+  border-color: #000000;
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(93, 78, 142, 0.6);
+}
+.link-login{
+  color: var(--color-logo);
+}
+.link-login:hover{
+  color: var(--color-logo);
+  font-weight: bold;
+}
+.entrada-login::placeholder {
+  color: var(--color-letra);
+  opacity: 1;
+}
+.check-login{
+  background: var(--color-terciario);
+}
+.check-login:checked{
+  background: var(--color-terciario);
+}
+.mensaje-login{
+  color: var(--color-letra);
+}
+.form-control.is-invalid, .was-validated .form-control:invalid {
+  border-color: var(--color-principal);
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(93, 78, 142, 0.6);
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 12 12' width='12' height='12' fill='none' stroke='%23FFE600'%3e%3ccircle cx='6' cy='6' r='4.5'/%3e%3cpath stroke-linejoin='round' d='M5.8 3.6h.4L6 6.5z'/%3e%3ccircle cx='6' cy='8.2' r='.6' fill='%23FFE600' stroke='none'/%3e%3c/svg%3e");
+}
+
+.form-control.is-valid, .was-validated .form-control:valid {
+  border-color: var(--color-principal);
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(93, 78, 142, 0.6);
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 8 8'%3e%3cpath fill='%235D4E8E' d='M2.3 6.73L.6 4.53c-.4-1.04.46-1.4 1.1-.8l1.1 1.4 3.4-3.8c.6-.63 1.6-.27 1.2.7l-4 4.6c-.43.5-.8.4-1.1.1z'/%3e%3c/svg%3e");
+}
+
+.form-check-input.is-valid:checked, .was-validated .form-check-input:valid:checked {
+  background-color: var(--color-principal);
+  border-color: var(--color-principal);
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(93, 78, 142, 0.6);
+}
+.form-check-input.is-invalid, .was-validated .form-check-input:invalid {
+  border-color: var(--color-logo);
+}
+.terminos-titulo{
+  color: var(--color-logo);
+}
+.terminos-titulo-principal{
+  color: var(--color-logo);
+  font-weight: bold;
+  text-align: center;
+}
