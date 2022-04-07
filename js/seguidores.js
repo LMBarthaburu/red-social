@@ -23,7 +23,4 @@ const usersApi = async () => {
 }
 usersApi()
 
-// const datosApi = () => {
-//   const userName = getElementById('user-name');
-  
-// }
+
