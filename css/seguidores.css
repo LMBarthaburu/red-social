@@ -124,21 +124,18 @@ header{
 
 /* SEGUIDORES */
 
-.cards-seguidores{
-  background-color: #7B77C2;
-}
-
 .card-seguidores{
   border-width: 1px;
   border-radius: 10px;
   background-color: #B09DCE;
   margin-top: 5px;
   margin-bottom: 5px;
+  width: 30%;
 }
 
 .image-perfil{
-  border-radius: 75px;
   max-width: 120px;
+  border-color: antiquewhite;
 }
 
 .nombre-usuario{
