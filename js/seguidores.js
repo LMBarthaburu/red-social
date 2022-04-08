@@ -17,7 +17,7 @@ closeMenu=()=>{
 }
 
 const usersApi = async () => {
-  const urlApi = await fetch('https://randomuser.me/api/?results=100');
+  const urlApi = await fetch('https://randomuser.me/api/?results=10');
   const jsonUsersApi = await urlApi.json();
   return jsonUsersApi.results
 }
@@ -25,12 +25,13 @@ const usersApi = async () => {
 const dataUser = async () => {
   const dataUserApi = await usersApi()
   console.log(dataUserApi)
-  
+  const cardContainer = document.getElementById('card-container')
+
   const cardSeguidores = dataUserApi.map(user => `
-  <div class="card-seguidores text-center w-1 pt-3">
+  <div class="card-seguidores text-center pt-3 mx-1 col-3">
           <img src="https://picsum.photos/200?random=1" class="image-perfil card-img-top" id="foto-de-perfil" alt="foto de perfil">
           <div class="card-body">
-            <h5 class="card-title" id="nombre-y-apellido">Nombre y apellido</h5>
+            <h5 class="card-title" id="nombre-y-apellido">${user.name.first} ${user.name.last}</h5>
             <h6 class="card-text nombre-usuario" id="nombre-usuario">@nombredeusuario</h6>
             <h6 class="card-text nombre-usuario" id="edad">Edad</h6>
             <p class="card-text nombre-usuario" id="ciudad-de-origen">Ciudad de origen</p>
@@ -38,6 +39,7 @@ const dataUser = async () => {
           </div>
         </div>
   `)
+ cardContainer.innerHTML = cardSeguidores.join('')
 }
 
 dataUser()
