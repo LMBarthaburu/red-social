@@ -131,6 +131,7 @@ header{
   margin-top: 5px;
   margin-bottom: 5px;
   width: 30%;
+  box-shadow: 5px 0px 6px -6px rgba(0,0,0,0.75);
 }
 
 .image-perfil{
@@ -140,4 +141,10 @@ header{
 
 .nombre-usuario{
   font-size: small;
+}
+
+@media (max-width: 768px){
+  .card-seguidores{
+    width: 170px;
+  }
 }
