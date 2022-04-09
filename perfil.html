@@ -43,13 +43,25 @@
     </section>
     <section id="muro" class="row d-flex justify-content-center">
       <div class="col-12 col-md-8 col-lg-7 columna1 mx-1">
-        <div id="input-publicacion" class="input-publicacion d-flex align-items-center justify-content-between">
+        <div class="d-flex align-items-center justify-content-evenly mb-2">
+          <button class="btn-publicacion-posteo" onclick="mostrarInputPosteo()">Nuevo Posteo</button>
+          <button class="btn-publicacion-posteo"onclick="mostrarInputImg()">Publicar Imagen</button>
+        </div>
+        <div id="input-publicacion" class="input-publicacion d-flex align-items-center justify-content-between d-none">
           <textarea type="text" id="input-text" class="input-text" placeholder="Qué estas pensando...."></textarea>
           <button id="btn-publicacion" class="btn-publicacion" onclick="crearPublicacion()">Publicar</button>
         </div>
+        <div id="input-publicacion-img" class="input-publicacion  align-items-center justify-content-between d-none">
+          <input type="text" id="input-text-img" class="input-text" placeholder="Agrega un titulo a la imagen....">
+          <div class="file-select mt-1" id="src-file1" >
+            <input type="file" name="" id="img-publicacion" class="input-file" onchange="previsualizacion()">
+          </div>
+          <img id="img-previsualizacion" class="img-previsualizacion d-none">
+          <br>
+          <button id="btn-publicacion" class="btn-publicacion mt-1" onclick="crearPublicacionConFoto()">Publicar Imagen</button>
+        </div>
         <div id="publicaiones-nuevas"></div>
         <div id="publicaiones-viejas"></div>
-
       </div>
     </section> 
   </main>

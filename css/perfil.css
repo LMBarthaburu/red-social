@@ -86,6 +86,16 @@ header{
   border-radius: 10px;
   padding: 8px;
 }
+.btn-publicacion-posteo{
+  width: 100%;
+  background-color: var(--color-terciario);
+  padding: 10px;
+  margin: 2px;
+  border-radius: 10px;
+  border: none;
+  font-weight: bold;
+  color: var(--color-logo);
+}
 .input-publicacion{
   width: 100%;
   background-color: var(--color-terciario);
@@ -102,6 +112,42 @@ header{
 .input-text:focus{
   border: none;
   outline: none;
+}
+.img-previsualizacion{
+  width: 100px;
+  height: 100px;
+  object-fit: contain;
+  margin-right: 15px;
+}
+.input-text::placeholder{
+color: var(--color-letra);
+}
+.file-select {
+position: relative;
+display: inline-block;
+cursor: pointer;
+}
+
+.file-select::before {
+background-color: var(--color-segundario);
+color: var(--color-letra);
+font-weight: bold;
+display: flex;
+justify-content: center;
+align-items: center;
+border-radius: 3px;
+content: 'Seleccionar Imagen';
+position: absolute;
+padding: 5px;
+cursor: pointer;
+}
+
+.file-select .input-file {
+opacity: 0;
+width: 200px;
+height: 32px;
+cursor: pointer;
+display: block;
 }
 .btn-publicacion{
   background-color: transparent;
