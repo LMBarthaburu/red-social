@@ -149,3 +149,70 @@ header{
     font-size: 10px;
   }
 }
+
+.perfil-style{
+  padding: 5px;
+  border-radius: 100%;
+  height: 180px;
+  width: 180px;
+  
+}
+
+.containerSeguidos{
+  padding-right: 45px;
+}
+
+
+
+
+
+@media (max-width: 576px) {
+  .containerSeguidos{
+    display: none;
+  }
+  
+  .containerInfo{
+    padding: 30px;
+  }
+
+  .sizeButtom{
+    width: 200px
+  }
+ 
+}
+
+@media (min-width: 577px) and (max-width: 992px) {
+  
+  .containerSeguidos{
+    display: none;
+  }
+
+  .containerInfo{
+    padding: 30px;
+  }
+
+  .sizeButtom{
+    width: 180px;
+  }
+  
+}
+
+.sizeButtom{
+  background-color: var(--color-segundario);
+}
+
+.buttomStyle{
+  display: flex;
+  justify-content: center;
+  justify-content: space-evenly;
+  padding: 20px
+  
+}
+
+@media (min-width: 993px) {
+
+  .sizeButtom{
+    width: 180px;
+  }
+}
+
