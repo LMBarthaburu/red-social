@@ -35,7 +35,7 @@ const dataUser = async () => {
             <h6 class="card-text nombre-usuario fw-bold fst-italic" id="nombre-usuario">${`@`}${user.login.username}</h6>
             <h6 class="card-text nombre-usuario" id="edad">${user.dob.age}${` años`}</h6>
             <p class="card-text nombre-usuario fst-italic lh-1" id="ciudad-de-origen">${`📍`}${user.location.city}${`, `}${user.location.state}</p>
-            <a href="#" class="boton-seguir btn btn-light btn-sm fw-bold" id="boton-seguir">SEGUIR</a>
+            <button class="" onclick="seguir()" id="boton-seguir">SEGUIR</button>
           </div>
         </div>
   `)
@@ -43,3 +43,12 @@ const dataUser = async () => {
 }
 
 dataUser()
+
+const botonSeguirValor = false;
+
+const seguir = () => {
+  const botonSeguir = document.getElementById('boton-seguir');
+  if (botonSeguir !== false) {
+    botonSeguir.innerHTML = 'Dejar de seguir'
+  }
+}
