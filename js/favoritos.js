@@ -1,3 +1,11 @@
+const getData=()=>{
+  const data = localStorage.getItem('usuario')
+  const dataObj = JSON.parse(data)
+  const navPerfil = document.getElementById('nav-perfil')
+  navPerfil.innerHTML=`${dataObj.nombre}`
+}
+getData()
+
 openMenu=()=>{
   const menu = document.getElementById('menu')
   const contenedor = document.getElementById('contenedor')

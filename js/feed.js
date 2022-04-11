@@ -1,3 +1,11 @@
+const getData=()=>{
+  const data = localStorage.getItem('usuario')
+  const dataObj = JSON.parse(data)
+  const navPerfil = document.getElementById('nav-perfil')
+  navPerfil.innerHTML=`${dataObj.nombre}`
+}
+getData()
+
 const openMenu=()=>{
   const menu = document.getElementById('menu')
   const contenedor = document.getElementById('contenedor')
@@ -46,6 +54,9 @@ const previsualizacion =()=>{
 let arrayCards = []
 
 const crearPublicacion=()=>{
+  const data = localStorage.getItem('usuario')
+  const dataObj = JSON.parse(data)
+
   const texto = document.getElementById('input-text')
   const area = document.getElementById('publicaiones-nuevas')
 
@@ -83,7 +94,7 @@ const crearPublicacion=()=>{
             <img src="/img/Imagen-de-perfil.jpg" alt="Imagen de perfil" class="nav-img" >
           </div>
           <div class="w-75">
-            <h3 class="card-title">Card title</h3>
+            <h3 class="card-title">${dataObj.nombre}</h3>
             <h5 class="text">${texto.value}</h5>
             <div class="d-flex justify-content-between align-items-center">
               <div class="d-flex fecha-hora">
@@ -110,6 +121,9 @@ const crearPublicacion=()=>{
 }
 
 const crearPublicacionConFoto=()=>{
+  const data = localStorage.getItem('usuario')
+  const dataObj = JSON.parse(data)
+
   const texto = document.getElementById('input-text-img')
   const area = document.getElementById('publicaiones-nuevas')
   const previsualizacionImg=document.getElementById('img-previsualizacion')
@@ -152,7 +166,7 @@ const crearPublicacionConFoto=()=>{
             <img src="/img/Imagen-de-perfil.jpg" alt="Imagen de perfil" class="nav-img" >
           </div>
           <div class="w-75">
-            <h3 class="card-title">Card title</h3>
+            <h3 class="card-title">${dataObj.nombre}</h3>
             <h5 class="text">${texto.value}</h5>
             <img src="${url}" alt="" class="w-100" id="foto">
             <div class="d-flex justify-content-between align-items-center">
