@@ -143,6 +143,14 @@ header{
   font-size: small;
 }
 
+.boton-seguir{
+  background-color: aliceblue;
+  color: #5D4E8E;
+  border-radius: 10px;
+  border-color: aliceblue;
+  border: 0px;
+}
+
 @media (max-width: 768px){
   .card-seguidores{
     width: 170px;
