@@ -93,3 +93,6 @@ const cargarCards=()=>{
   arrayCards.unshift(card)
 }
 cargarCards()
+  
+localStorage.setItem('nombre', Carla);
+const usuarioLLL = localStorage.getItem('nombre');

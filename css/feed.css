@@ -128,7 +128,9 @@ header{
   font-size: 12px;
 }
 
-
+.card-feed{
+  margin: 5px 0;
+}
 
 
 @media (min-width: 577px) and (max-width: 992px){
