@@ -20,7 +20,7 @@
         <div class="button-box d-flex align-items-center" id="contenedor" onmouseover="openMenu()" onmouseleave="closeMenu()">
           <img src="/img/Imagen-de-perfil.jpg" alt="Imagen de perfil" class="nav-img" >
           <div id="menu" class="d-lg-none align-items-center justify-content-center">
-            <a class="ps-2 menu-item" href="/perfil.html" >Perfil</a>
+            <a class="ps-2 menu-item" href="/perfil.html" id="nav-perfil"></a>
             <a class="ps-2 menu-item" href="/favoritos.html" >Favoritos</a>
             <a class="ps-2 menu-item" href="/seguidores.html" >Seguidores</a>
             <input class="form-control me-2 d-none d-lg-inline" type="search" placeholder="Search" aria-label="Search">          
@@ -37,7 +37,16 @@
       <div class="contenedor-cards-seguidores col-12 col-md-8 col-lg-7 columna2 m-1 d-flex justify-content-evenly" >
 
       <div id="card-container" class="row w-100 d-flex justify-content-evenly">
-
+        <!-- <div class="card-seguidores text-center pt-3 mx-1">
+          <img src="${user.picture.large}" class="image-perfil card-img-top rounded-circle" id="foto-de-perfil" alt="foto de perfil">
+          <div class="card-body px-1">
+            <h5 class="card-title fw-bold" id="nombre-y-apellido">${user.name.first} ${user.name.last}</h5>
+            <h6 class="card-text nombre-usuario fw-bold fst-italic" id="nombre-usuario">${`@`}${user.login.username}</h6>
+            <h6 class="card-text nombre-usuario" id="edad">${user.dob.age}${` años`}</h6>
+            <p class="card-text nombre-usuario fst-italic lh-1" id="ciudad-de-origen">${`📍`}${user.location.city}${`, `}${user.location.state}</p>
+            <button class="boton-seguir p-1 px-2" onclick="seguir()" id="boton-seguir"><b>SEGUIR</b></button>
+          </div>
+        </div> -->
       </div>
 
       </div>
@@ -46,6 +55,7 @@
       </div>
     </section> 
   </main>
+
   
   
     <footer>
@@ -56,6 +66,7 @@
         <article class="col-12 col-sm-4 d-flex justify-content-center">
           <p class="text-yellow">© M.I.G.O 2022 - Todos los derechos reservados</p>
         </article>
+
 
       </section>
     </footer>
