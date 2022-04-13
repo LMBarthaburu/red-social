@@ -43,7 +43,7 @@ const cardSeguidores = dataUserApi.map(user => `
              <h6 class="card-text nombre-usuario fw-bold fst-italic" id="nombre-usuario">${`@`}${user.login.username}</h6>
              <h6 class="card-text nombre-usuario" id="edad">${user.dob.age}${` años`}</h6>
              <p class="card-text nombre-usuario fst-italic lh-1" id="ciudad-de-origen">${`📍`}${user.location.city}${`, `}${user.location.state}</p>
-             <button class="boton-seguir p-1 px-2" onclick="seguir()" id="boton-seguir"><b>SEGUIR</b></button>
+             <button class="boton-seguir p-1 px-2" onclick="seguir('${user.login.uuid}')" id="${user.login.uuid}"><b>SEGUIR</b></button>
            </div>
          </div>
    `)
@@ -54,11 +54,10 @@ const cardSeguidores = dataUserApi.map(user => `
 
 let botonSeguirValor = false;
 
-const seguir = () => {
-  const botonSeguir = document.getElementById('boton-seguir');
-  if (botonSeguirValor == false) {
+const seguir = (id) => {
+  const botonSeguir = document.getElementById(id);
+  if (botonSeguir.innerText === "SEGUIR") {
     botonSeguir.innerHTML = 'Dejar de seguir';
-    botonSeguirValor = true;
   } else {
     botonSeguir.innerHTML = `<b>SEGUIR</b>`;
     botonSeguirValor = false
