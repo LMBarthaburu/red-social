@@ -25,7 +25,7 @@ closeMenu=()=>{
 }
 
 const usersApi = async () => {
-  const urlApi = await fetch('https://randomuser.me/api/?results=6');
+  const urlApi = await fetch('https://randomuser.me/api/?results=9');
   const jsonUsersApi = await urlApi.json();
   return jsonUsersApi.results
 }
@@ -52,11 +52,15 @@ const cardSeguidores = dataUserApi.map(user => `
 
  dataUser()
 
-const botonSeguirValor = false;
+let botonSeguirValor = false;
 
 const seguir = () => {
   const botonSeguir = document.getElementById('boton-seguir');
-  if (botonSeguir !== false) {
-    botonSeguir.innerHTML = 'Dejar de seguir'
+  if (botonSeguirValor == false) {
+    botonSeguir.innerHTML = 'Dejar de seguir';
+    botonSeguirValor = true;
+  } else {
+    botonSeguir.innerHTML = `<b>SEGUIR</b>`;
+    botonSeguirValor = false
   }
 }
