@@ -1,3 +1,11 @@
+const getData=()=>{
+  const data = localStorage.getItem('usuario')
+  const dataObj = JSON.parse(data)
+  const navPerfil = document.getElementById('nav-perfil')
+  navPerfil.innerHTML=`${dataObj.nombre}`
+}
+getData()
+
 openMenu=()=>{
   const menu = document.getElementById('menu')
   const contenedor = document.getElementById('contenedor')
@@ -17,29 +25,38 @@ closeMenu=()=>{
 }
 
 const usersApi = async () => {
-  const urlApi = await fetch('https://randomuser.me/api/?results=10');
+  const urlApi = await fetch('https://randomuser.me/api/?results=6');
   const jsonUsersApi = await urlApi.json();
   return jsonUsersApi.results
 }
 
-const dataUser = async () => {
-  const dataUserApi = await usersApi()
-  console.log(dataUserApi)
-  const cardContainer = document.getElementById('card-container')
+ const dataUser = async () => {
+   const dataUserApi = await usersApi()
+   console.log(dataUserApi)
+   const cardContainer = document.getElementById('card-container')
 
-  const cardSeguidores = dataUserApi.map(user => `
-  <div class="card-seguidores text-center pt-3 mx-1 col-3">
-          <img src="https://picsum.photos/200?random=1" class="image-perfil card-img-top" id="foto-de-perfil" alt="foto de perfil">
-          <div class="card-body">
-            <h5 class="card-title" id="nombre-y-apellido">${user.name.first} ${user.name.last}</h5>
-            <h6 class="card-text nombre-usuario" id="nombre-usuario">@nombredeusuario</h6>
-            <h6 class="card-text nombre-usuario" id="edad">Edad</h6>
-            <p class="card-text nombre-usuario" id="ciudad-de-origen">Ciudad de origen</p>
-            <a href="#" class="btn btn-light btn-sm">Seguir</a>
-          </div>
-        </div>
-  `)
- cardContainer.innerHTML = cardSeguidores.join('')
+const cardSeguidores = dataUserApi.map(user => `
+   <div class="card-seguidores text-center pt-3 mx-1">
+           <img src="${user.picture.large}" class="image-perfil card-img-top rounded-circle" id="foto-de-perfil" alt="foto de perfil">
+           <div class="card-body px-1">
+             <h5 class="card-title fw-bold" id="nombre-y-apellido">${user.name.first} ${user.name.last}</h5>
+             <h6 class="card-text nombre-usuario fw-bold fst-italic" id="nombre-usuario">${`@`}${user.login.username}</h6>
+             <h6 class="card-text nombre-usuario" id="edad">${user.dob.age}${` años`}</h6>
+             <p class="card-text nombre-usuario fst-italic lh-1" id="ciudad-de-origen">${`📍`}${user.location.city}${`, `}${user.location.state}</p>
+             <button class="boton-seguir p-1 px-2" onclick="seguir()" id="boton-seguir"><b>SEGUIR</b></button>
+           </div>
+         </div>
+   `)
+  cardContainer.innerHTML = cardSeguidores.join('')
+ }
+
+ dataUser()
+
+const botonSeguirValor = false;
+
+const seguir = () => {
+  const botonSeguir = document.getElementById('boton-seguir');
+  if (botonSeguir !== false) {
+    botonSeguir.innerHTML = 'Dejar de seguir'
+  }
 }
-
-dataUser()
