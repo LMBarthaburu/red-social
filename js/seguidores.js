@@ -6,7 +6,7 @@ const getData=()=>{
 }
 getData()
 
-openMenu=()=>{
+const openMenu=()=>{
   const menu = document.getElementById('menu')
   const contenedor = document.getElementById('contenedor')
 
@@ -15,7 +15,7 @@ openMenu=()=>{
   menu.classList.add('d-lg-flex')
 }
 
-closeMenu=()=>{
+const closeMenu=()=>{
   const menu = document.getElementById('menu')
   const contenedor = document.getElementById('contenedor')
 
@@ -51,7 +51,6 @@ const cardSeguidores = dataUserApi.map(user => `
  }
 
  dataUser()
-
 
 const seguir = (id) => {
   const botonSeguir = document.getElementById(id);
