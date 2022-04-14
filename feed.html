@@ -13,7 +13,7 @@
     integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css">
   <link rel="stylesheet" href="/css/feed.css">
-  <title>MIGO community - Feed</title>
+ <title>MIGO community - Feed</title>
 </head>
 
 <body>
@@ -41,9 +41,22 @@
 
       </div>
       <div class="col-12 col-md-8 col-lg-7 columna2 mx-1">
-        <div id="input-publicacion" class="input-publicacion d-flex align-items-center justify-content-between">
+        <div class="d-flex align-items-center justify-content-evenly mb-2">
+          <button class="btn-publicacion-posteo" onclick="mostrarInputPosteo()">Nuevo Posteo</button>
+          <button class="btn-publicacion-posteo"onclick="mostrarInputImg()">Publicar Imagen</button>
+        </div>
+        <div id="input-publicacion" class="input-publicacion d-flex align-items-center justify-content-between d-none">
           <textarea type="text" id="input-text" class="input-text" placeholder="Qué estas pensando...."></textarea>
           <button id="btn-publicacion" class="btn-publicacion" onclick="crearPublicacion()">Publicar</button>
+        </div>
+        <div id="input-publicacion-img" class="input-publicacion  align-items-center justify-content-between d-none">
+          <input type="text" id="input-text-img" class="input-text" placeholder="Agrega un titulo a la imagen....">
+          <div class="file-select mt-1" id="src-file1" >
+            <input type="file" name="" id="img-publicacion" class="input-file" onchange="previsualizacion()" accept="image/*">
+          </div>
+          <img id="img-previsualizacion" class="img-previsualizacion d-none">
+          <br>
+          <button id="btn-publicacion" class="btn-publicacion mt-1" onclick="crearPublicacionConFoto()">Publicar Imagen</button>
         </div>
         <div id="publicaiones-nuevas"></div>
         <div id="publicaiones-viejas"></div>
@@ -54,17 +67,13 @@
       </div>
     </section>
   </main>
+
   <footer>
-    <section class="row footer-style pt-2 pb-2">
-      <article class="col-12 col-sm-4 d-flex footer-logo-centro">
-
-      </article>
-      <article class="col-12 col-sm-4 d-flex justify-content-center">
+    <section class="d-flex justify-content-center w-100 position-fixed bottom-0 py-2">
         <p class="text-yellow">© M.I.G.O 2022 - Todos los derechos reservados</p>
-      </article>
-
     </section>
   </footer>
+  
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous">
   </script>
