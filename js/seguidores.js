@@ -36,14 +36,14 @@ const usersApi = async () => {
    const cardContainer = document.getElementById('card-container')
 
 const cardSeguidores = dataUserApi.map(user => `
-   <div class="card-seguidores text-center pt-3 mx-1">
+   <div class="card-seguidores text-center pt-3 mx-1 text-center">
            <img src="${user.picture.large}" class="image-perfil card-img-top rounded-circle" id="foto-de-perfil" alt="foto de perfil">
            <div class="card-body px-1">
              <h5 class="card-title fw-bold" id="nombre-y-apellido">${user.name.first} ${user.name.last}</h5>
              <h6 class="card-text nombre-usuario fw-bold fst-italic" id="nombre-usuario">${`@`}${user.login.username}</h6>
              <h6 class="card-text nombre-usuario" id="edad">${user.dob.age}${` años`}</h6>
              <p class="card-text nombre-usuario fst-italic lh-1" id="ciudad-de-origen">${`📍`}${user.location.city}${`, `}${user.location.state}</p>
-             <button class="boton-seguir p-1 px-2" onclick="seguir()" id="boton-seguir"><b>SEGUIR</b></button>
+             <button class="boton-seguir p-1 px-2" onclick="seguir('${user.login.uuid}')" id="${user.login.uuid}"><b>SEGUIR</b></button>
            </div>
          </div>
    `)
@@ -52,15 +52,12 @@ const cardSeguidores = dataUserApi.map(user => `
 
  dataUser()
 
-let botonSeguirValor = false;
 
-const seguir = () => {
-  const botonSeguir = document.getElementById('boton-seguir');
-  if (botonSeguirValor == false) {
-    botonSeguir.innerHTML = 'Dejar de seguir';
-    botonSeguirValor = true;
+const seguir = (id) => {
+  const botonSeguir = document.getElementById(id);
+  if (botonSeguir.innerText === "SEGUIR") {
+    botonSeguir.innerHTML = '<b>Dejar de seguir</b>';
   } else {
     botonSeguir.innerHTML = `<b>SEGUIR</b>`;
-    botonSeguirValor = false
   }
 }
