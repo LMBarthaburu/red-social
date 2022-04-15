@@ -6,7 +6,7 @@ const getData=()=>{
 }
 getData()
 
-openMenu=()=>{
+const openMenu=()=>{
   const menu = document.getElementById('menu')
   const contenedor = document.getElementById('contenedor')
 
@@ -15,7 +15,7 @@ openMenu=()=>{
   menu.classList.add('d-lg-flex')
 }
 
-closeMenu=()=>{
+const closeMenu=()=>{
   const menu = document.getElementById('menu')
   const contenedor = document.getElementById('contenedor')
 
@@ -36,7 +36,7 @@ const usersApi = async () => {
    const cardContainer = document.getElementById('card-container')
 
 const cardSeguidores = dataUserApi.map(user => `
-   <div class="card-seguidores text-center pt-3 mx-1">
+   <div class="card-seguidores text-center pt-3 mx-1 text-center">
            <img src="${user.picture.large}" class="image-perfil card-img-top rounded-circle" id="foto-de-perfil" alt="foto de perfil">
            <div class="card-body px-1">
              <h5 class="card-title fw-bold" id="nombre-y-apellido">${user.name.first} ${user.name.last}</h5>
@@ -52,14 +52,11 @@ const cardSeguidores = dataUserApi.map(user => `
 
  dataUser()
 
-let botonSeguirValor = false;
-
 const seguir = (id) => {
   const botonSeguir = document.getElementById(id);
   if (botonSeguir.innerText === "SEGUIR") {
-    botonSeguir.innerHTML = 'Dejar de seguir';
+    botonSeguir.innerHTML = '<b>Dejar de seguir</b>';
   } else {
     botonSeguir.innerHTML = `<b>SEGUIR</b>`;
-    botonSeguirValor = false
   }
 }
