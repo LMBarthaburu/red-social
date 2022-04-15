@@ -25,7 +25,7 @@ const closeMenu=()=>{
 }
 
 const usersApi = async () => {
-  const urlApi = await fetch('https://randomuser.me/api/?results=9');
+  const urlApi = await fetch('https://randomuser.me/api/?results=12');
   const jsonUsersApi = await urlApi.json();
   return jsonUsersApi.results
 }
