@@ -55,7 +55,7 @@ const cardSeguidores = dataUserApi.map(user => `
 const seguir = (id) => {
   const botonSeguir = document.getElementById(id);
   if (botonSeguir.innerText === "SEGUIR") {
-    botonSeguir.innerHTML = '<b>Dejar de seguir</b>';
+    botonSeguir.innerHTML = 'Dejar de seguir';
   } else {
     botonSeguir.innerHTML = `<b>SEGUIR</b>`;
   }
