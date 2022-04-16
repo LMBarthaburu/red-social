@@ -10,6 +10,7 @@
   font-family:'Inter', sans-serif;
   padding: 0;
   margin: 0;
+  border-width: 0;
 }
 body{
   background-color: var(--color-principal);
@@ -185,10 +186,8 @@ header{
 .format-img{
   background-color: var(--color-terciario);
   display: block;
-  outline: none;
-  border: 0px hidden #555555;
-  height: 18px;
-  width: 18px;
+  height: 20px;
+  width: 20px;
 }
 .format-perfil{
   width: 50px;
