@@ -8,6 +8,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
 *{
   font-family:'Inter', sans-serif;
+  padding: 0;
+  margin: 0;
 }
 body{
   background-color: var(--color-principal);
@@ -177,13 +179,20 @@ header{
   width: 99%;
   padding: 3px 2px;
 }
+.format-nombre{
+  padding: 1px 10px 1px;
+}
 .format-img{
   background-color: var(--color-terciario);
-  display: block; 
-  height: 20px;
-  width: 20px;
-  margin: 3px;
-  padding: 0px 0px;
+  display: block;
+  outline: none;
+  border: 0px hidden #555555;
+  height: 18px;
+  width: 18px;
+}
+.format-perfil{
+  width: 50px;
+  height: 50px;
 }
 .card-feed{
   margin: 5px 0;
