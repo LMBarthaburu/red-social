@@ -196,6 +196,24 @@ header{
 .card-feed{
   margin: 5px 0;
 }
+.pub-c{
+  border-radius: 3%;
+  height: 400px;
+  width: 400px;
+}
+.pub-m{
+  border-radius: 3%;
+  height: 400px;
+  width: 300px;
+}
+.pub-d{
+  border-radius: 3%;
+  height: 300px;
+  width: 200%;
+}
+.format-pub{
+  border-radius: 3%;
+}
 
 
 @media (min-width: 577px) and (max-width: 992px){
