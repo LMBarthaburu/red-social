@@ -300,8 +300,13 @@ border-radius: 100%;
 }
 @media (min-width: 415px) and (max-width: 1024px){
   .fp-t{
-    width: 500px;
+    width: 370px;
+    height: 200px;
+  }
+  .resp-t-d{
+    border-radius: 3%;
     height: 250px;
+    width: 100%;
   }
 }
 
@@ -317,7 +322,7 @@ border-radius: 100%;
 @media (max-width: 576px){
   .nav-logo{
     margin-left: 15px;
-    width: 80px;;
+    width: 80px;
   }
   .button-box{
     margin-right: 15px;
