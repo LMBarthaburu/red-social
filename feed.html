@@ -30,7 +30,6 @@
             <a class="ps-2 menu-item" href="/favoritos.html">Favoritos</a>
             <a class="ps-2 menu-item" href="/seguidores.html">Seguidores</a>
             <input class="form-control me-2 d-none d-lg-inline" type="search" placeholder="Search" aria-label="Search">
-
           </div>
         </div>
       </div>
@@ -39,7 +38,26 @@
   <main class="container">
     <section id="muro" class="row d-flex justify-content-center">
       <div class="d-none d-lg-inline col-2 columna1 text-center">
-
+        <div class="card card-feed align-items-center">
+          <img src="https://www.dzoom.org.es/wp-content/uploads/2020/02/portada-foto-perfil-redes-sociales-consejos-810x540.jpg"
+            class="perfil-style" alt="perfil">
+          <div class="card-body">
+            <a class="button-style-name" href="./perfil.html" target="_blank" id="button-perfil">
+              <button onclick="nombrePerfil()"></button>
+            </a>
+          </div>
+        </div>
+        <div class="text-style-profile border-secondary" id="email-perfil">
+          <p class="fst-italic fw-bold text-warning"></p>
+        </div>
+        <div class="buttons-seg-fav">
+          <a href="./seguidores.html" target="_blank">
+            <button type="button" class="btn btn-warning button-style">Seguidores</button>
+          </a>
+          <a href="./favoritos.html" target="_blank">
+            <button type="button" class="btn btn-warning button-style">Favoritos</button>
+          </a>
+        </div>
       </div>
       <div class="col-12 col-md-8 col-lg-7 columna2 mx-1">
         <div class="d-flex align-items-center justify-content-evenly mb-2">
@@ -321,7 +339,7 @@
         </div>
       </div>
       <div class="d-none d-md-inline col-3 col-lg-2 columna3">
-
+        
       </div>
     </section>
   </main>
