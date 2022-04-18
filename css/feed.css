@@ -215,6 +215,33 @@ header{
   border-radius: 3%;
 }
 
+@media (max-width: 414px){
+  .resp-m-c{
+    border-radius: 3%;
+    height: 300px;
+    width: 300px;
+  }
+  .resp-m-d{
+    border-radius: 3%;
+    height: 200px;
+    width: 100%;
+  }
+  .resp-m-m{
+    border-radius: 3%;
+    height: 350px;
+    width: 250px;
+  }
+  .fp-m{
+    width: 350px;
+    height: 200px;
+  }
+}
+@media (min-width: 415px) and (max-width: 1024px){
+  .fp-t{
+    width: 500px;
+    height: 250px;
+  }
+}
 
 @media (min-width: 577px) and (max-width: 992px){
   .nav-logo{
@@ -223,6 +250,7 @@ header{
   .button-box{
     margin-right: 15px;
   }
+  
 }
 @media (max-width: 576px){
   .nav-logo{
@@ -239,4 +267,5 @@ header{
   .menu-item{
     font-size: 10px;
   }
+  
 }
