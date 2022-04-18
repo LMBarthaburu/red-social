@@ -6,6 +6,22 @@ const getData=()=>{
 }
 getData()
 
+const nombrePerfil=()=>{
+  const nombreData = localStorage.getItem('usuario')
+  const nombreDataObj = JSON.parse(nombreData)
+  const usuarioPerfil = document.getElementById('button-perfil')
+  usuarioPerfil.innerHTML=`${nombreDataObj.nombre}`
+}
+nombrePerfil()
+
+const emailPerfil=()=>{
+  const emailData = localStorage.getItem('email')
+  const emailDataObj = JSON.parse(emailData)
+  const emailPerfil = document.getElementById('email-perfil')
+  emailPerfil.innerHTML=`${emailDataObj.email}`
+}
+emailPerfil()
+
 const openMenu=()=>{
   const menu = document.getElementById('menu')
   const contenedor = document.getElementById('contenedor')
