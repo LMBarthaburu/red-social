@@ -1,3 +1,15 @@
+const getData=()=>{
+  const data = localStorage.getItem('usuario')
+  const dataObj = JSON.parse(data)
+  const navPerfil = document.getElementById('nav-perfil')
+  navPerfil.innerHTML=`${dataObj.nombre}`
+  const usuarioPerfil = document.getElementById('button-perfil')
+  usuarioPerfil.innerHTML=`${dataObj.nombre}`
+  const emailPerfil = document.getElementById('email-perfil')
+  emailPerfil.innerHTML=`${dataObj.email}`
+}
+getData()
+
 const openMenu=()=>{
   const menu = document.getElementById('menu')
   const contenedor = document.getElementById('contenedor')
@@ -52,27 +64,3 @@ const seguir = (id) => {
     botonSeguir.innerHTML = `<b>SEGUIR</b>`;
   }
 }
-
-const getData=()=>{
-  const data = localStorage.getItem('usuario')
-  const dataObj = JSON.parse(data)
-  const navPerfil = document.getElementById('nav-perfil')
-  navPerfil.innerHTML=`${dataObj.nombre}`
-}
-getData()
-
-const nombrePerfil=()=>{
-  const nombreData = localStorage.getItem('usuario')
-  const nombreDataObj = JSON.parse(nombreData)
-  const usuarioPerfil = document.getElementById('button-perfil')
-  usuarioPerfil.innerHTML=`${nombreDataObj.nombre}`
-}
-nombrePerfil()
-
-const emailPerfil=()=>{
-  const emailData = localStorage.getItem('email')
-  const emailDataObj = JSON.parse(emailData)
-  const emailPerfil = document.getElementById('email-perfil')
-  emailPerfil.innerHTML=`${emailDataObj.email}`
-}
-emailPerfil()
