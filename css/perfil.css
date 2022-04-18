@@ -176,6 +176,36 @@ display: block;
   width: 180px;
   
 }
+.format-text{
+  width: 99%;
+  padding: 3px 2px;
+}
+.format-nombre{
+  padding: 1px 10px 1px;
+}
+.format-img{
+  background-color: var(--color-terciario);
+  display: block;
+  height: 20px;
+  width: 20px;
+}
+.format-perfil{
+  width: 50px;
+  height: 50px;
+}
+.card-feed{
+  margin: 5px 0;
+}
+.pub-c{
+  border-radius: 3%;
+  width: 80%;
+  margin-top: 6px;
+}
+.format-pub{
+  border-radius: 3%;
+  width: 100%;
+  margin-top: 6px;
+
 
 @media(max-width: 500px ){
   .nav-logo{
