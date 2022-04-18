@@ -235,12 +235,10 @@ border-radius: 100%;
   background-color: var(--color-terciario);
   border-radius: 10px;
 }
-.fecha-hora{
-  font-size: 12px;
-}
 .format-text{
   width: 99%;
   padding: 3px 2px;
+  margin: 5px 5px 5px;
 }
 .format-nombre{
   padding: 1px 10px 1px;
@@ -257,24 +255,17 @@ border-radius: 100%;
 }
 .card-feed{
   margin: 5px 0;
+  padding: 3px;
 }
 .pub-c{
   border-radius: 3%;
-  height: 400px;
-  width: 400px;
-}
-.pub-m{
-  border-radius: 3%;
-  height: 400px;
-  width: 300px;
-}
-.pub-d{
-  border-radius: 3%;
-  height: 300px;
-  width: 200%;
+  width: 80%;
+  margin-top: 6px;
 }
 .format-pub{
   border-radius: 3%;
+  width: 100%;
+  margin-top: 6px;
 }
 
 @media (max-width: 414px){
@@ -307,6 +298,11 @@ border-radius: 100%;
     border-radius: 3%;
     height: 250px;
     width: 100%;
+  }
+  .resp-t-m{
+    border-radius: 3%;
+    height: 400px;
+    width: 300px;
   }
 }
 
