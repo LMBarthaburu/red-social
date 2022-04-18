@@ -235,9 +235,6 @@ border-radius: 100%;
   background-color: var(--color-terciario);
   border-radius: 10px;
 }
-.fecha-hora{
-  font-size: 12px;
-}
 .format-text{
   width: 99%;
   padding: 3px 2px;
@@ -260,21 +257,13 @@ border-radius: 100%;
 }
 .pub-c{
   border-radius: 3%;
-  height: 400px;
-  width: 400px;
-}
-.pub-m{
-  border-radius: 3%;
-  height: 400px;
-  width: 300px;
-}
-.pub-d{
-  border-radius: 3%;
-  height: 300px;
-  width: 200%;
+  width: 80%;
+  margin-top: 6px;
 }
 .format-pub{
   border-radius: 3%;
+  width: 100%;
+  margin-top: 6px;
 }
 
 
