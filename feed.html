@@ -1,359 +1,350 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="keywords" content="red social, chat, amigos, seguidores, fotografias,">
-  <meta name="description" content="red social">
-  <meta name="author" content="">
-  <meta name="robots" content="noindex">
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
-    integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css">
-  <link rel="stylesheet" href="/css/feed.css">
- <title>MIGO community - Feed</title>
-</head>
-
-<body>
-  <header>
-    <nav class="navbar navbar-expand-lg">
-      <div class="container">
-        <a class="logo text-decoration-none border-0" href="/feed.html"><img src="/img/MIGO-logo.svg" alt="Migo Logo"
-            class="nav-logo"></a>
-        <div class="button-box d-flex align-items-center" id="contenedor" onmouseover="openMenu()"
-          onmouseleave="closeMenu()">
-          <img src="/img/Imagen-de-perfil.jpg" alt="Imagen de perfil" class="nav-img">
-          <div id="menu" class="d-lg-none align-items-center justify-content-center">
-            <a class="ps-2 menu-item" href="/perfil.html" id="nav-perfil"></a>
-            <a class="ps-2 menu-item" href="/favoritos.html">Favoritos</a>
-            <a class="ps-2 menu-item" href="/seguidores.html">Seguidores</a>
-            <input class="form-control me-2 d-none d-lg-inline" type="search" placeholder="Search" aria-label="Search">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="red social, chat, amigos, seguidores, fotografias,">
+    <meta name="description" content="red social">
+    <meta name="author" content="">
+    <meta name="robots" content="noindex">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="/css/feed.css">
+    <title>MIGO community - Feed</title>
+  </head>
+  <body>
+    <header>
+      <nav class="navbar navbar-expand-lg">
+        <div class="container">
+          <a class="logo text-decoration-none border-0" href="/feed.html"><img src="/img/MIGO-logo.svg" alt="Migo Logo" class="nav-logo"></a>
+          <div class="button-box d-flex align-items-center" id="contenedor" onmouseover="openMenu()" onmouseleave="closeMenu()">
+            <img src="/img/Imagen-de-perfil.jpg" alt="Imagen de perfil" class="nav-img">
+            <div id="menu" class="d-lg-none align-items-center justify-content-center">
+              <a class="ps-2 menu-item" href="/perfil.html" id="nav-perfil"></a>
+              <a class="ps-2 menu-item" href="/favoritos.html">Favoritos</a>
+              <a class="ps-2 menu-item" href="/seguidores.html">Seguidores</a>
+              <input class="form-control me-2 d-none d-lg-inline" type="search" placeholder="Search" aria-label="Search">
+            </div>
           </div>
         </div>
-      </div>
-    </nav>
-  </header>
-  <main class="container">
-    <section id="muro" class="row d-flex justify-content-center">
-      <div class="d-none d-lg-inline col-2 columna1 text-center">
-        <div class="card card-feed align-items-center">
-          <img src="https://www.dzoom.org.es/wp-content/uploads/2020/02/portada-foto-perfil-redes-sociales-consejos-810x540.jpg"
-            class="perfil-style" alt="perfil">
-          <div class="card-body">
-            <a class="button-style-name" href="./perfil.html" target="_blank" id="button-perfil">
-              <button onclick="nombrePerfil()"></button>
+      </nav>
+    </header>
+    <main class="container">
+      <section id="muro" class="row d-flex justify-content-center">
+        <div class="d-none d-lg-inline col-2 columna1 text-center">
+          <div class="card card-feed align-items-center">
+            <img src="https://www.dzoom.org.es/wp-content/uploads/2020/02/portada-foto-perfil-redes-sociales-consejos-810x540.jpg"
+              class="perfil-style" alt="perfil">
+            <div>
+              <a class="style-name" href="./perfil.html" target="_blank" id="nombre-perfil"></a>
+              <h5 class="style-email" id="email-perfil"></h5>
+              <h6>Tucumán - Arg.<br>Web Designer</h6>
+            </div>
+          </div>
+          <div class="buttons-seg-fav">
+            <a href="./seguidores.html" target="_blank">
+              <button type="button" class="text-style">Seguidores 1.125</button>
+            </a>
+            <a href="./favoritos.html" target="_blank">
+              <button type="button" class="text-style">Favoritos 1.200</button>
             </a>
           </div>
         </div>
-        <div class="text-style-profile border-secondary" id="email-perfil">
-          <p class="fst-italic fw-bold text-warning"></p>
-        </div>
-        <div class="buttons-seg-fav">
-          <a href="./seguidores.html" target="_blank">
-            <button type="button" class="btn btn-warning button-style">Seguidores</button>
-          </a>
-          <a href="./favoritos.html" target="_blank">
-            <button type="button" class="btn btn-warning button-style">Favoritos</button>
-          </a>
-        </div>
-      </div>
-      <div class="col-12 col-md-8 col-lg-7 columna2 mx-1">
-        <div class="d-flex align-items-center justify-content-evenly mb-2">
-          <button class="btn-publicacion-posteo" onclick="mostrarInputPosteo()">Nuevo Posteo</button>
-          <button class="btn-publicacion-posteo"onclick="mostrarInputImg()">Publicar Imagen</button>
-        </div>
-        <div id="input-publicacion" class="input-publicacion d-flex align-items-center justify-content-between d-none">
-          <textarea type="text" id="input-text" class="input-text" placeholder="Qué estas pensando...."></textarea>
-          <button id="btn-publicacion" class="btn-publicacion" onclick="crearPublicacion()">Publicar</button>
-        </div>
-        <div id="input-publicacion-img" class="input-publicacion  align-items-center justify-content-between d-none">
-          <input type="text" id="input-text-img" class="input-text" placeholder="Agrega un titulo a la imagen....">
-          <div class="file-select mt-1" id="src-file1" >
-            <input type="file" name="" id="img-publicacion" class="input-file" onchange="previsualizacion()" accept="image/*">
+        <div class="col-12 col-md-8 col-lg-7 columna2 mx-1">
+          <div class="d-flex align-items-center justify-content-evenly mb-2">
+            <button class="btn-publicacion-posteo" onclick="mostrarInputPosteo()">Nuevo Posteo</button>
+            <button class="btn-publicacion-posteo"onclick="mostrarInputImg()">Publicar Imagen</button>
           </div>
-          <img id="img-previsualizacion" class="img-previsualizacion d-none">
-          <br>
-          <button id="btn-publicacion" class="btn-publicacion mt-1" onclick="crearPublicacionConFoto()">Publicar Imagen</button>
-        </div>
-        <div id="publicaiones-nuevas"></div>
-        <div id="publicaiones-viejas"></div>
-        <div class="input-publicacion d-flex align-items-center flex-column justify-content-between card-feed col">
-          <div class="d-flex flex-row bd-highlight format-text justify-content-start">
-            <div class="">
-              <img class="format-perfil rounded-circle" src="./img/c.jpeg" alt="">
-            </div>
-            <div class="d-flex align-items-center format-nombre">
-              <h3>Cecilia Luna</h3>
-            </div>
+          <div id="input-publicacion" class="input-publicacion d-flex align-items-center justify-content-between d-none">
+            <textarea type="text" id="input-text" class="input-text" placeholder="Qué estas pensando...."></textarea>
+            <button id="btn-publicacion" class="btn-publicacion" onclick="crearPublicacion()">Publicar</button>
           </div>
-          <div class="d-flex justify-content-center flex-column">
-            <div class="d-flex justify-content-center align-items-center">
-              <img class="pub-c" src="./img/c.jpeg" alt="foto">
+          <div id="input-publicacion-img" class="input-publicacion  align-items-center justify-content-between d-none">
+            <input type="text" id="input-text-img" class="input-text" placeholder="Agrega un titulo a la imagen....">
+            <div class="file-select mt-1" id="src-file1" >
+              <input type="file" name="" id="img-publicacion" class="input-file" onchange="previsualizacion()" accept="image/*">
             </div>
-            <div class="format-text ">
+            <img id="img-previsualizacion" class="img-previsualizacion d-none">
+            <br>
+            <button id="btn-publicacion" class="btn-publicacion mt-1" onclick="crearPublicacionConFoto()">Publicar Imagen</button>
+          </div>
+          <div id="publicaiones-nuevas"></div>
+          <div id="publicaiones-viejas"></div>
+          <div class="input-publicacion d-flex align-items-center flex-column justify-content-between card-feed col">
+            <div class="d-flex flex-row bd-highlight format-text justify-content-start">
+              <div class="">
+                <img class="format-perfil rounded-circle" src="./img/c.jpeg" alt="">
+              </div>
+              <div class="d-flex align-items-center format-nombre">
+                <h3>Cecilia Luna</h3>
+              </div>
+            </div>
+            <div class="d-flex justify-content-center flex-column">
+              <div class="d-flex justify-content-center align-items-center">
+                <img class="pub-c" src="./img/c.jpeg" alt="foto">
+              </div>
+              <div class="format-text ">
+              </div>
+            </div>
+            <div class="d-flex flex-row bd-highlight justify-content-between format-text">
+              <div id="current_date">Octubre 30, 2022</div>
+              <div class="">
+                <button><img class="format-img" src="./img/icono-like.jpg" alt="boton-like"></button>
+                <button><img class="format-img" src="./img/icono-guardar.png" alt="boton-guardar"></button>
+              </div>
             </div>
           </div>
-          <div class="d-flex flex-row bd-highlight justify-content-between format-text">
-            <div id="current_date">Octubre 30, 2022</div>
-            <div class="">
-              <button><img class="format-img" src="./img/icono-like.jpg" alt="boton-like"></button>
-              <button><img class="format-img" src="./img/icono-guardar.png" alt="boton-guardar"></button>
+          <div class="input-publicacion d-flex align-items-center flex-column justify-content-between card-feed col">
+            <div class="d-flex flex-row bd-highlight format-text justify-content-start">
+              <div class="">
+                <img class="format-perfil rounded-circle" src="./img/mt.jpeg" alt="">
+              </div>
+              <div class="d-flex align-items-center format-nombre">
+                <h3>Matias Torres</h3>
+              </div>
+            </div>
+            <div class="d-flex justify-content-center flex-column">
+              <div class="d-flex justify-content-center align-items-center">
+                <img class="pub-c" src="./img/mt.jpeg" alt="foto">
+              </div>
+              <div class="format-text ">
+              </div>
+            </div>
+            <div class="d-flex flex-row bd-highlight justify-content-between format-text">
+              <div id="current_date">Septiembre 27, 2022</div>
+              <div class="">
+                <button><img class="format-img" src="./img/icono-like.jpg" alt="boton-like"></button>
+                <button><img class="format-img" src="./img/icono-guardar.png" alt="boton-guardar"></button>
+              </div>
             </div>
           </div>
-        </div>
-        <div class="input-publicacion d-flex align-items-center flex-column justify-content-between card-feed col">
-          <div class="d-flex flex-row bd-highlight format-text justify-content-start">
-            <div class="">
-              <img class="format-perfil rounded-circle" src="./img/mt.jpeg" alt="">
+          <div class="input-publicacion d-flex align-items-center flex-column justify-content-between card-feed col">
+            <div class="d-flex flex-row bd-highlight format-text justify-content-start">
+              <div class="">
+                <img class="format-perfil rounded-circle" src="./img/ac.jpeg" alt="">
+              </div>
+              <div class="d-flex align-items-center format-nombre">
+                <h3>Alejandro Chasampi</h3>
+              </div>
             </div>
-            <div class="d-flex align-items-center format-nombre">
-              <h3>Matias Torres</h3>
+            <div class="d-flex justify-content-center flex-column">
+              <div class="d-flex justify-content-center align-items-center">
+                <img class="pub-c" src="./img/ac.jpeg" alt="foto">
+              </div>
+              <div class="format-text ">
+              </div>
             </div>
-          </div>
-          <div class="d-flex justify-content-center flex-column">
-            <div class="d-flex justify-content-center align-items-center">
-              <img class="pub-c" src="./img/mt.jpeg" alt="foto">
-            </div>
-            <div class="format-text ">
-            </div>
-          </div>
-          <div class="d-flex flex-row bd-highlight justify-content-between format-text">
-            <div id="current_date">Septiembre 27, 2022</div>
-            <div class="">
-              <button><img class="format-img" src="./img/icono-like.jpg" alt="boton-like"></button>
-              <button><img class="format-img" src="./img/icono-guardar.png" alt="boton-guardar"></button>
-            </div>
-          </div>
-        </div>
-        <div class="input-publicacion d-flex align-items-center flex-column justify-content-between card-feed col">
-          <div class="d-flex flex-row bd-highlight format-text justify-content-start">
-            <div class="">
-              <img class="format-perfil rounded-circle" src="./img/ac.jpeg" alt="">
-            </div>
-            <div class="d-flex align-items-center format-nombre">
-              <h3>Alejandro Chasampi</h3>
+            <div class="d-flex flex-row bd-highlight justify-content-between format-text">
+              <div id="current_date">Septiembre 23, 2022</div>
+              <div class="">
+                <button><img class="format-img" src="./img/icono-like.jpg" alt="boton-like"></button>
+                <button><img class="format-img" src="./img/icono-guardar.png" alt="boton-guardar"></button>
+              </div>
             </div>
           </div>
-          <div class="d-flex justify-content-center flex-column">
-            <div class="d-flex justify-content-center align-items-center">
-              <img class="pub-d" src="./img/ac.jpeg" alt="foto">
+          <div class="input-publicacion d-flex align-items-center flex-column justify-content-between card-feed col">
+            <div class="d-flex flex-row bd-highlight format-text justify-content-start">
+              <div class="">
+                <img class="format-perfil rounded-circle" src="./img/i.jpeg" alt="">
+              </div>
+              <div class="d-flex align-items-center format-nombre">
+                <h3>Iván Cruz</h3>
+              </div>
             </div>
-            <div class="format-text ">
+            <div class="d-flex justify-content-center flex-column">
+              <div class="d-flex justify-content-center align-items-center">
+                <img class="pub-c" src="./img/i.jpeg" alt="foto">
+              </div>
+              <div class="format-text ">
+              </div>
             </div>
-          </div>
-          <div class="d-flex flex-row bd-highlight justify-content-between format-text">
-            <div id="current_date">Septiembre 23, 2022</div>
-            <div class="">
-              <button><img class="format-img" src="./img/icono-like.jpg" alt="boton-like"></button>
-              <button><img class="format-img" src="./img/icono-guardar.png" alt="boton-guardar"></button>
-            </div>
-          </div>
-        </div>
-        <div class="input-publicacion d-flex align-items-center flex-column justify-content-between card-feed col">
-          <div class="d-flex flex-row bd-highlight format-text justify-content-start">
-            <div class="">
-              <img class="format-perfil rounded-circle" src="./img/i.jpeg" alt="">
-            </div>
-            <div class="d-flex align-items-center format-nombre">
-              <h3>Iván Cruz</h3>
-            </div>
-          </div>
-          <div class="d-flex justify-content-center flex-column">
-            <div class="d-flex justify-content-center align-items-center">
-              <img class="pub-d" src="./img/i.jpeg" alt="foto">
-            </div>
-            <div class="format-text ">
+            <div class="d-flex flex-row bd-highlight justify-content-between format-text">
+              <div id="current_date">Agosto 23, 2022</div>
+              <div class="">
+                <button><img class="format-img" src="./img/icono-like.jpg" alt="boton-like"></button>
+                <button><img class="format-img" src="./img/icono-guardar.png" alt="boton-guardar"></button>
+              </div>
             </div>
           </div>
-          <div class="d-flex flex-row bd-highlight justify-content-between format-text">
-            <div id="current_date">Agosto 23, 2022</div>
-            <div class="">
-              <button><img class="format-img" src="./img/icono-like.jpg" alt="boton-like"></button>
-              <button><img class="format-img" src="./img/icono-guardar.png" alt="boton-guardar"></button>
+          <div class="input-publicacion d-flex align-items-center flex-column justify-content-between card-feed col">
+            <div class="d-flex flex-row bd-highlight format-text justify-content-start">
+              <div class="">
+                <img class="format-perfil rounded-circle" src="./img/lb.jpeg" alt="">
+              </div>
+              <div class="d-flex align-items-center format-nombre">
+                <h3>Luis Miguel Barthaburu</h3>
+              </div>
+            </div>
+            <div class="d-flex justify-content-center flex-column">
+              <div class="d-flex justify-content-center align-items-center">
+                <img class="pub-c" src="./img/lb.jpeg" alt="foto">
+              </div>
+              <div class="format-text ">
+              </div>
+            </div>
+            <div class="d-flex flex-row bd-highlight justify-content-between format-text">
+              <div id="current_date">Julio 25, 2022</div>
+              <div class="">
+                <button><img class="format-img" src="./img/icono-like.jpg" alt="boton-like"></button>
+                <button><img class="format-img" src="./img/icono-guardar.png" alt="boton-guardar"></button>
+              </div>
             </div>
           </div>
-        </div>
-        <div class="input-publicacion d-flex align-items-center flex-column justify-content-between card-feed col">
-          <div class="d-flex flex-row bd-highlight format-text justify-content-start">
-            <div class="">
-              <img class="format-perfil rounded-circle" src="./img/lb.jpeg" alt="">
+          <div class="input-publicacion d-flex align-items-center flex-column justify-content-between card-feed col">
+            <div class="d-flex flex-row bd-highlight format-text justify-content-start">
+              <div class="">
+                <img class="format-perfil rounded-circle" src="./img/d.jpeg" alt="">
+              </div>
+              <div class="d-flex align-items-center format-nombre">
+                <h3>David Flores</h3>
+              </div>
             </div>
-            <div class="d-flex align-items-center format-nombre">
-              <h3>Luis Miguel Barthaburu</h3>
+            <div class="d-flex justify-content-center flex-column">
+              <div class="d-flex justify-content-center align-items-center">
+                <img class="pub-c" src="./img/d.jpeg" alt="foto">
+              </div>
+              <div class="format-text ">
+              </div>
             </div>
-          </div>
-          <div class="d-flex justify-content-center flex-column">
-            <div class="d-flex justify-content-center align-items-center">
-              <img class="pub-c" src="./img/lb.jpeg" alt="foto">
-            </div>
-            <div class="format-text ">
-            </div>
-          </div>
-          <div class="d-flex flex-row bd-highlight justify-content-between format-text">
-            <div id="current_date">Julio 25, 2022</div>
-            <div class="">
-              <button><img class="format-img" src="./img/icono-like.jpg" alt="boton-like"></button>
-              <button><img class="format-img" src="./img/icono-guardar.png" alt="boton-guardar"></button>
-            </div>
-          </div>
-        </div>
-        <div class="input-publicacion d-flex align-items-center flex-column justify-content-between card-feed col">
-          <div class="d-flex flex-row bd-highlight format-text justify-content-start">
-            <div class="">
-              <img class="format-perfil rounded-circle" src="./img/d.jpeg" alt="">
-            </div>
-            <div class="d-flex align-items-center format-nombre">
-              <h3>David Flores</h3>
+            <div class="d-flex flex-row bd-highlight justify-content-between format-text">
+              <div id="current_date">Junio 12, 2022</div>
+              <div class="">
+                <button><img class="format-img" src="./img/icono-like.jpg" alt="boton-like"></button>
+                <button><img class="format-img" src="./img/icono-guardar.png" alt="boton-guardar"></button>
+              </div>
             </div>
           </div>
-          <div class="d-flex justify-content-center flex-column">
-            <div class="d-flex justify-content-center align-items-center">
-              <img class="pub-c" src="./img/d.jpeg" alt="foto">
+          <div class="input-publicacion d-flex align-items-center flex-column justify-content-between card-feed col">
+            <div class="d-flex flex-row bd-highlight format-text justify-content-start">
+              <div class="">
+                <img class="format-perfil rounded-circle" src="./img/m.jpeg" alt="">
+              </div>
+              <div class="d-flex align-items-center format-nombre">
+                <h3>Mariano Garzón</h3>
+              </div>
             </div>
-            <div class="format-text ">
+            <div class="d-flex justify-content-center flex-column">
+              <div class="d-flex justify-content-center align-items-center">
+                <img class="pub-c" src="./img/m.jpeg" alt="foto">
+              </div>
+              <div class="format-text ">
+              </div>
             </div>
-          </div>
-          <div class="d-flex flex-row bd-highlight justify-content-between format-text">
-            <div id="current_date">Junio 12, 2022</div>
-            <div class="">
-              <button><img class="format-img" src="./img/icono-like.jpg" alt="boton-like"></button>
-              <button><img class="format-img" src="./img/icono-guardar.png" alt="boton-guardar"></button>
-            </div>
-          </div>
-        </div>
-        <div class="input-publicacion d-flex align-items-center flex-column justify-content-between card-feed col">
-          <div class="d-flex flex-row bd-highlight format-text justify-content-start">
-            <div class="">
-              <img class="format-perfil rounded-circle" src="./img/m.jpeg" alt="">
-            </div>
-            <div class="d-flex align-items-center format-nombre">
-              <h3>Mariano Garzón</h3>
-            </div>
-          </div>
-          <div class="d-flex justify-content-center flex-column">
-            <div class="d-flex justify-content-center align-items-center">
-              <img class="pub-m" src="./img/m.jpeg" alt="foto">
-            </div>
-            <div class="format-text ">
+            <div class="d-flex flex-row bd-highlight justify-content-between format-text">
+              <div id="current_date">Mayo 4, 2022</div>
+              <div class="">
+                <button><img class="format-img" src="./img/icono-like.jpg" alt="boton-like"></button>
+                <button><img class="format-img" src="./img/icono-guardar.png" alt="boton-guardar"></button>
+              </div>
             </div>
           </div>
-          <div class="d-flex flex-row bd-highlight justify-content-between format-text">
-            <div id="current_date">Mayo 4, 2022</div>
-            <div class="">
-              <button><img class="format-img" src="./img/icono-like.jpg" alt="boton-like"></button>
-              <button><img class="format-img" src="./img/icono-guardar.png" alt="boton-guardar"></button>
+          <div class="input-publicacion d-flex align-items-center flex-column justify-content-between card-feed col">
+            <div class="d-flex flex-row bd-highlight format-text justify-content-start">
+              <div>
+                <img class="format-perfil rounded-circle" src="https://randomuser.me/api/portraits/men/91.jpg" alt="">
+              </div>
+              <div class="d-flex align-items-center format-nombre">
+                <h3>Raymond Rhodes</h3>
+              </div>
             </div>
-          </div>
-        </div>
-        <div class="input-publicacion d-flex align-items-center flex-column justify-content-between card-feed col">
-          <div class="d-flex flex-row bd-highlight format-text justify-content-start">
-            <div>
-              <img class="format-perfil rounded-circle" src="https://randomuser.me/api/portraits/men/91.jpg" alt="">
-            </div>
-            <div class="d-flex align-items-center format-nombre">
-              <h3>Raymond Rhodes</h3>
-            </div>
-          </div>
-          <div class="format-text">
-            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ex placeat saepe possimus. Voluptates quo ad non fuga minima possimus, natus, corrupti harum voluptas aliquid optio impedit magnam accusamus molestiae quod!
-          </div>
-          <div class="d-flex flex-row bd-highlight justify-content-between format-text">
-            <div id="current_date">Mayo 2, 2022</div>
-            <div class="">
-              <button><img class="format-img" src="./img/icono-like.jpg" alt="boton-like"></button>
-              <button><img class="format-img" src="./img/icono-guardar.png" alt="boton-guardar"></button>
-            </div>
-          </div>
-        </div>
-        <div class="input-publicacion d-flex align-items-center flex-column justify-content-between card-feed col">
-          <div class="d-flex flex-row bd-highlight format-text justify-content-start">
-            <div class="">
-              <img class="format-perfil rounded-circle" src="https://randomuser.me/api/portraits/men/93.jpg" alt="">
-            </div>
-            <div class="d-flex align-items-center format-nombre">
-              <h3>Russell Nelson</h3>
-            </div>
-          </div>
-          <div class="format-text">
-            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ex placeat saepe possimus. Voluptates quo ad non fuga minima possimus, natus, corrupti harum voluptas aliquid optio impedit magnam accusamus molestiae quod!
-          </div>
-          <div class="d-flex flex-row bd-highlight justify-content-between format-text">
-            <div id="current_date">Abril 16, 2022</div>
-            <div class="">
-              <button><img class="format-img" src="./img/icono-like.jpg" alt="boton-like"></button>
-              <button><img class="format-img" src="./img/icono-guardar.png" alt="boton-guardar"></button>
-            </div>
-          </div>
-        </div>
-        <div class="input-publicacion d-flex align-items-center flex-column justify-content-between card-feed col">
-          <div class="d-flex flex-row bd-highlight format-text justify-content-start">
-            <div class="">
-              <img class="format-perfil rounded-circle" src="https://randomuser.me/api/portraits/women/43.jpg" alt="">
-            </div>
-            <div class="d-flex align-items-center format-nombre">
-              <h3>Gina Hamilton</h3>
-            </div>
-          </div>
-          <div class="d-flex justify-content-center flex-column">
-            <div class="d-flex justify-content-center align-items-center">
-              <img class="format-pub" src="https://picsum.photos/600/300?random=1" alt="foto">
-            </div>
-            <div class="format-text ">
+            <div class="format-text">
               Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ex placeat saepe possimus. Voluptates quo ad non fuga minima possimus, natus, corrupti harum voluptas aliquid optio impedit magnam accusamus molestiae quod!
             </div>
+            <div class="d-flex flex-row bd-highlight justify-content-between format-text">
+              <div id="current_date">Mayo 2, 2022</div>
+              <div class="">
+                <button><img class="format-img" src="./img/icono-like.jpg" alt="boton-like"></button>
+                <button><img class="format-img" src="./img/icono-guardar.png" alt="boton-guardar"></button>
+              </div>
+            </div>
           </div>
-          <div class="d-flex flex-row bd-highlight justify-content-between format-text">
-            <div id="current_date">Febrero 23, 2022</div>
-            <div class="">
-              <button><img class="format-img" src="./img/icono-like.jpg" alt="boton-like"></button>
-              <button><img class="format-img" src="./img/icono-guardar.png" alt="boton-guardar"></button>
+          <div class="input-publicacion d-flex align-items-center flex-column justify-content-between card-feed col">
+            <div class="d-flex flex-row bd-highlight format-text justify-content-start">
+              <div class="">
+                <img class="format-perfil rounded-circle" src="https://randomuser.me/api/portraits/men/93.jpg" alt="">
+              </div>
+              <div class="d-flex align-items-center format-nombre">
+                <h3>Russell Nelson</h3>
+              </div>
+            </div>
+            <div class="format-text">
+              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ex placeat saepe possimus. Voluptates quo ad non fuga minima possimus, natus, corrupti harum voluptas aliquid optio impedit magnam accusamus molestiae quod!
+            </div>
+            <div class="d-flex flex-row bd-highlight justify-content-between format-text">
+              <div id="current_date">Abril 16, 2022</div>
+              <div class="">
+                <button><img class="format-img" src="./img/icono-like.jpg" alt="boton-like"></button>
+                <button><img class="format-img" src="./img/icono-guardar.png" alt="boton-guardar"></button>
+              </div>
+            </div>
+          </div>
+          <div class="input-publicacion d-flex align-items-center flex-column justify-content-between card-feed col">
+            <div class="d-flex flex-row bd-highlight format-text justify-content-start">
+              <div class="">
+                <img class="format-perfil rounded-circle" src="https://randomuser.me/api/portraits/women/43.jpg" alt="">
+              </div>
+              <div class="d-flex align-items-center format-nombre">
+                <h3>Gina Hamilton</h3>
+              </div>
+            </div>
+            <div class="d-flex justify-content-center flex-column">
+              <div class="d-flex justify-content-center align-items-center">
+                <img class="format-pub" src="https://picsum.photos/600/300?random=1" alt="foto">
+              </div>
+              <div class="format-text ">
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ex placeat saepe possimus. Voluptates quo ad non fuga minima possimus, natus, corrupti harum voluptas aliquid optio impedit magnam accusamus molestiae quod!
+              </div>
+            </div>
+            <div class="d-flex flex-row bd-highlight justify-content-between format-text">
+              <div id="current_date">Febrero 23, 2022</div>
+              <div class="">
+                <button><img class="format-img" src="./img/icono-like.jpg" alt="boton-like"></button>
+                <button><img class="format-img" src="./img/icono-guardar.png" alt="boton-guardar"></button>
+              </div>
+            </div>
+          </div>
+          <div class="input-publicacion d-flex align-items-center flex-column justify-content-between card-feed col">
+            <div class="d-flex flex-row bd-highlight format-text justify-content-start">
+              <div class="">
+                <img class="format-perfil rounded-circle" src="https://randomuser.me/api/portraits/women/75.jpg" alt="">
+              </div>
+              <div class="d-flex align-items-center format-nombre">
+                <h3>Taylor Simpson</h3>
+              </div>
+            </div>
+            <div class="d-flex justify-content-center flex-column">
+              <div class="d-flex justify-content-center align-items-center">
+                <img class="format-pub" src="https://picsum.photos/600/300?random=2" alt="foto">
+              </div>
+              <div class="format-text ">
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ex plarupti harum voluptas aliquid optio impedit magnam accusamus molestiae quod!
+              </div>
+            </div>
+            <div class="d-flex flex-row bd-highlight justify-content-between format-text">
+              <div id="current_date">Enero 7, 2022</div>
+              <div class="">
+                <button><img class="format-img" src="./img/icono-like.jpg" alt="boton-like"></button>
+                <button><img class="format-img" src="./img/icono-guardar.png" alt="boton-guardar"></button>
+              </div>
             </div>
           </div>
         </div>
-        <div class="input-publicacion d-flex align-items-center flex-column justify-content-between card-feed col">
-          <div class="d-flex flex-row bd-highlight format-text justify-content-start">
-            <div class="">
-              <img class="format-perfil rounded-circle" src="https://randomuser.me/api/portraits/women/75.jpg" alt="">
-            </div>
-            <div class="d-flex align-items-center format-nombre">
-              <h3>Taylor Simpson</h3>
-            </div>
-          </div>
-          <div class="d-flex justify-content-center flex-column">
-            <div class="d-flex justify-content-center align-items-center">
-              <img class="format-pub" src="https://picsum.photos/600/300?random=2" alt="foto">
-            </div>
-            <div class="format-text ">
-              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ex plarupti harum voluptas aliquid optio impedit magnam accusamus molestiae quod!
-            </div>
-          </div>
-          <div class="d-flex flex-row bd-highlight justify-content-between format-text">
-            <div id="current_date">Enero 7, 2022</div>
-            <div class="">
-              <button><img class="format-img" src="./img/icono-like.jpg" alt="boton-like"></button>
-              <button><img class="format-img" src="./img/icono-guardar.png" alt="boton-guardar"></button>
-            </div>
-          </div>
+        <div class="d-none d-md-inline col-3 col-lg-2 columna3">
+          
         </div>
-      </div>
-      <div class="d-none d-md-inline col-3 col-lg-2 columna3">
-        
-      </div>
-    </section>
-  </main>
+      </section>
+    </main>
 
-  <footer>
-    <section class="d-flex justify-content-center w-100 py-2">
+    <footer>
+      <section class="d-flex justify-content-center w-100 py-2">
         <p class="text-yellow  m-0">© M.I.G.O 2022 - Todos los derechos reservados</p>
-    </section>
-  </footer>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
-    integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous">
-  </script>
-  <script src="/js//feed.js"></script>
+      </section>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous">
+    </script>
+    <script src="/js//feed.js"></script>
 
-</body>
-
+  </body>
 </html>

@@ -3,24 +3,12 @@ const getData=()=>{
   const dataObj = JSON.parse(data)
   const navPerfil = document.getElementById('nav-perfil')
   navPerfil.innerHTML=`${dataObj.nombre}`
+  const usuarioPerfil = document.getElementById('nombre-perfil')
+  usuarioPerfil.innerHTML=`${dataObj.nombre}`
+  const emailPerfil = document.getElementById('email-perfil')
+  emailPerfil.innerHTML=`${dataObj.email}`
 }
 getData()
-
-const nombrePerfil=()=>{
-  const nombreData = localStorage.getItem('usuario')
-  const nombreDataObj = JSON.parse(nombreData)
-  const usuarioPerfil = document.getElementById('button-perfil')
-  usuarioPerfil.innerHTML=`${nombreDataObj.nombre}`
-}
-nombrePerfil()
-
-const emailPerfil=()=>{
-  const emailData = localStorage.getItem('email')
-  const emailDataObj = JSON.parse(emailData)
-  const emailPerfil = document.getElementById('email-perfil')
-  emailPerfil.innerHTML=`${emailDataObj.email}`
-}
-emailPerfil()
 
 const openMenu=()=>{
   const menu = document.getElementById('menu')
@@ -78,9 +66,9 @@ const crearPublicacion=()=>{
 
   const date = new Date()
   const fechaNumero=date.toLocaleString('sp',  {day: 'numeric'} )
-  const fechaMes=date.toLocaleString('sp', {month: 'short'})
+  const fechaMes=date.toLocaleString('sp', {month: 'long'})
   const fechaAño=date.toLocaleString('sp', {year:'numeric'})
-  const fecha = `${fechaNumero}/${fechaMes}/${fechaAño}`
+  const fecha = `${fechaMes} ${fechaNumero}, ${fechaAño}`
 
   const fechahora = new Date()
   let hora = fechahora.getHours() 
@@ -104,24 +92,23 @@ const crearPublicacion=()=>{
   area.prepend(contenedor)
   const cards = `
     <div class="publicacion-nueva my-2">
-      <div class="p-2">
-        <div class="d-flex">
-          <div class="mx-3">
-            <img src="/img/Imagen-de-perfil.jpg" alt="Imagen de perfil" class="nav-img" >
+      <div class="input-publicacion d-flex align-items-center flex-column justify-content-between card-feed col">
+        <div class="d-flex flex-row bd-highlight format-text justify-content-start">
+          <div class="">
+            <img class="format-perfil rounded-circle" src="/img/Imagen-de-perfil.jpg" alt="">
           </div>
-          <div class="w-75">
-            <h3 class="card-title">${dataObj.nombre}</h3>
-            <h5 class="text">${texto.value}</h5>
-            <div class="d-flex justify-content-between align-items-center">
-              <div class="d-flex fecha-hora">
-                <p class="m-0 px-1">${fecha}</p>
-                <p class="m-0 px-1">--- ${tiempo}</p>
-              </div>
-              <div>
-                <i class="bi bi-heart px-1"></i>
-                <i class="bi bi-bookmark px-1"></i>
-              </div>
-            </div>
+          <div class="d-flex align-items-center format-nombre">
+            <h3>${dataObj.nombre}</h3>
+          </div>
+        </div>
+        <div class="format-text">
+        ${texto.value}
+        </div>
+        <div class="d-flex flex-row bd-highlight justify-content-between format-text">
+          <div id="current_date">${fecha} -- ${tiempo}</div>
+          <div class="">
+            <button><img class="format-img" src="./img/icono-like.jpg" alt="boton-like"></button>
+            <button><img class="format-img" src="./img/icono-guardar.png" alt="boton-guardar"></button>
           </div>
         </div>
       </div>
@@ -175,30 +162,32 @@ const crearPublicacionConFoto=()=>{
   const contenedor = document.createElement('div')
   area.prepend(contenedor)
   const cards = `
-    <div class="publicacion-nueva my-2">
-      <div class="p-2">
-        <div class="d-flex">
-          <div class="mx-3">
-            <img src="/img/Imagen-de-perfil.jpg" alt="Imagen de perfil" class="nav-img" >
-          </div>
-          <div class="w-75">
-            <h3 class="card-title">${dataObj.nombre}</h3>
-            <h5 class="text">${texto.value}</h5>
-            <img src="${url}" alt="" class="w-100" id="foto">
-            <div class="d-flex justify-content-between align-items-center">
-              <div class="d-flex fecha-hora">
-                <p class="m-0 px-1">${fecha}</p>
-                <p class="m-0 px-1">--- ${tiempo}</p>
-              </div>
-              <div>
-                <i class="bi bi-heart px-1"></i>
-                <i class="bi bi-bookmark px-1"></i>
-              </div>
-            </div>
-          </div>
+    <div class="input-publicacion d-flex align-items-center flex-column justify-content-between card-feed col">
+      <div class="d-flex flex-row bd-highlight format-text justify-content-start">
+        <div class="">
+          <img class="format-perfil rounded-circle" src="/img/Imagen-de-perfil.jpg" alt="">
+        </div>
+        <div class="d-flex align-items-center format-nombre">
+          <h3>${dataObj.nombre}</h3>
+        </div>
+      </div>
+      <div class="d-flex justify-content-center flex-column">
+        <div class="d-flex justify-content-center align-items-center">
+          <img class="format-pub w-100 mt-1" src="${url}" alt="foto" id="foto">
+        </div>
+      </div>
+      <div class="format-text ">
+          ${texto.value}
+      </div>
+      <div class="d-flex flex-row bd-highlight justify-content-between format-text">
+        <div id="current_date">${fecha} -- ${tiempo}</div>
+        <div class="">
+          <button><img class="format-img" src="./img/icono-like.jpg" alt="boton-like"></button>
+          <button><img class="format-img" src="./img/icono-guardar.png" alt="boton-guardar"></button>
         </div>
       </div>
     </div>
+
   `
   contenedor.innerHTML=cards
 

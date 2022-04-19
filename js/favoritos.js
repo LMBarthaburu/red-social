@@ -3,24 +3,12 @@ const getData=()=>{
   const dataObj = JSON.parse(data)
   const navPerfil = document.getElementById('nav-perfil')
   navPerfil.innerHTML=`${dataObj.nombre}`
+  const usuarioPerfil = document.getElementById('nombre-perfil')
+  usuarioPerfil.innerHTML=`${dataObj.nombre}`
+  const emailPerfil = document.getElementById('email-perfil')
+  emailPerfil.innerHTML=`${dataObj.email}`
 }
 getData()
-
-const nombrePerfil=()=>{
-  const nombreData = localStorage.getItem('usuario')
-  const nombreDataObj = JSON.parse(nombreData)
-  const usuarioPerfil = document.getElementById('button-perfil')
-  usuarioPerfil.innerHTML=`${nombreDataObj.nombre}`
-}
-nombrePerfil()
-
-const emailPerfil=()=>{
-  const emailData = localStorage.getItem('email')
-  const emailDataObj = JSON.parse(emailData)
-  const emailPerfil = document.getElementById('email-perfil')
-  emailPerfil.innerHTML=`${emailDataObj.email}`
-}
-emailPerfil()
 
 openMenu=()=>{
   const menu = document.getElementById('menu')
