@@ -282,11 +282,11 @@ border-radius: 100%;
   .resp-m-m{
     border-radius: 3%;
     height: 350px;
-    width: 250px;
+    width: 100%;
   }
   .fp-m{
     width: 350px;
-    height: 200px;
+    height: 100%;
   }
 }
 @media (min-width: 415px) and (max-width: 1024px){
@@ -303,6 +303,18 @@ border-radius: 100%;
     border-radius: 3%;
     height: 400px;
     width: 300px;
+  }
+}
+@media (min-width: 1025px) and (max-width: 1040px){
+  .resp-l-m{
+    border-radius: 3%;
+    height: 300px;
+    width: 200px;
+  }
+  .resp-l-d{
+    border-radius: 3%;
+    height: 300px;
+    width: 200px;
   }
 }
 
