@@ -28,6 +28,15 @@ const closeMenu=()=>{
   menu.classList.remove('d-lg-flex')
 }
 
+
+const getData=()=>{
+  const data = localStorage.getItem('usuario')
+  const dataObj = JSON.parse(data)
+  const navPerfil = document.getElementById('nav-perfil')
+  navPerfil.innerHTML=`${dataObj.nombre}`
+}
+getData()
+
 const usersApi = async () => {
   const urlApi = await fetch('https://randomuser.me/api/?results=12');
   const jsonUsersApi = await urlApi.json();
@@ -64,3 +73,20 @@ const seguir = (id) => {
     botonSeguir.innerHTML = `<b>SEGUIR</b>`;
   }
 }
+
+const nombrePerfil=()=>{
+  const nombreData = localStorage.getItem('usuario')
+  const nombreDataObj = JSON.parse(nombreData)
+  const usuarioPerfil = document.getElementById('button-perfil')
+  usuarioPerfil.innerHTML=`${nombreDataObj.nombre}`
+}
+nombrePerfil()
+
+const emailPerfil=()=>{
+  let emailData = localStorage.getItem('usuario')
+  const emailDataObj = JSON.parse(emailData)
+  const emailPerfilLocalStorage = document.getElementById('email-perfil')
+  emailPerfilLocalStorage.innerHTML= `@${emailDataObj.user}`
+  console.log(emailPerfilLocalStorage)
+}
+emailPerfil()
