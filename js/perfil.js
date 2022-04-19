@@ -103,8 +103,8 @@ const crearPublicacion=()=>{
         <div class="d-flex flex-row bd-highlight justify-content-between format-text">
           <div id="current_date">${fecha} -- ${tiempo}</div>
           <div class="">
-            <button><img class="format-img" src="./img/icono-like.jpg" alt="boton-like"></button>
-            <button><img class="format-img" src="./img/icono-guardar.png" alt="boton-guardar"></button>
+            <button class="boton-card"><img class="format-img" src="./img/icono-like.jpg" alt="boton-like"></button>
+            <button class="boton-card"><img class="format-img" src="./img/icono-guardar.png" alt="boton-guardar"></button>
           </div>
         </div>
       </div>
@@ -179,8 +179,8 @@ const crearPublicacionConFoto=()=>{
       <div class="d-flex flex-row bd-highlight justify-content-between format-text">
         <div id="current_date">${fecha} -- ${tiempo}</div>
         <div class="">
-          <button><img class="format-img" src="./img/icono-like.jpg" alt="boton-like"></button>
-          <button><img class="format-img" src="./img/icono-guardar.png" alt="boton-guardar"></button>
+          <button class="boton-card"><img class="format-img" src="./img/icono-like.jpg" alt="boton-like"></button>
+          <button class="boton-card"><img class="format-img" src="./img/icono-guardar.png" alt="boton-guardar"></button>
         </div>
       </div>
     </div>

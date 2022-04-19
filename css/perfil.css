@@ -205,7 +205,11 @@ display: block;
   border-radius: 3%;
   width: 100%;
   margin-top: 6px;
-
+}
+.boton-card{
+  border: none;
+  background-color: var(--color-terciario);
+}
 
 @media(max-width: 500px ){
   .nav-logo{
