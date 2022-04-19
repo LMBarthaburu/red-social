@@ -3,6 +3,11 @@ const getData=()=>{
   const dataObj = JSON.parse(data)
   const navPerfil = document.getElementById('nav-perfil')
   navPerfil.innerHTML=`${dataObj.nombre}`
+  const nombrePerfil = document.getElementById('nombre-perfil')
+  nombrePerfil.innerHTML=`${dataObj.nombre}`
+  const emailPerfil = document.getElementById('email-perfil')
+  emailPerfil.innerHTML=`${dataObj.email}`
+
 }
 getData()
 
