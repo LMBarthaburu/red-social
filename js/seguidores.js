@@ -56,27 +56,12 @@ const cardSeguidores = dataUserApi.map(user => `
 
  dataUser()
 
- let n = 0
 const seguir = (id) => {
-  const numSeguidores = localStorage.getItem('seguidores')
-  n=parseInt(numSeguidores)
   const botonSeguir = document.getElementById(id);
-  const seguidores = document.getElementById('numero-seguidores')
-  console.log(`${n}`)
   if (botonSeguir.innerText === "SEGUIR") {
     botonSeguir.innerHTML = 'Dejar de seguir';
-    n = n+1
     seguidores.innerHTML= `${n}`
   } else {
     botonSeguir.innerHTML = `<b>SEGUIR</b>`;
-    n = n-1
-    seguidores.innerHTML= `${n}`
   }
-  localStorage.setItem('seguidores',n)
 }
- const getSeguidores =()=>{
-  const numSeguidores = localStorage.getItem('seguidores')
-  const seguidores = document.getElementById('numero-seguidores')
-  seguidores.innerHTML= `${numSeguidores}`
- }
- getSeguidores()
