@@ -79,6 +79,8 @@ const chatApi = async () => {
    console.log(dataChatApi)
    const chatContainer = document.getElementById('chat-info')
 
+   console.log(dataChatApi)
+
 const divChat = dataChatApi.map(user => `
   <div class="d-flex justify-content-center">
     <img src="${user.picture.large}" class="image-perfil-chat rounded-circle" id="foto-de-perfil" alt="foto de perfil">

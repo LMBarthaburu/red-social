@@ -224,6 +224,8 @@ const chatApi = async () => {
    const dataChatApi = await chatApi()
    console.log(dataChatApi)
    const chatContainer = document.getElementById('chat-info')
+   
+   console.log(dataChatApi)
 
 const divChat = dataChatApi.map(user => `
   <div class="d-flex justify-content-center">
