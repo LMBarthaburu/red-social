@@ -70,14 +70,11 @@ header{
   background-color: var(--color-segundario);
   border-radius: 100px;
   padding: 8px;
-  height: 200px;
   box-shadow: 1px 1px 2px 0px rgba(0,0,0,0.5);
 }
 .info2{
   background-color: var(--color-segundario);
   border-radius: 10px;
-  padding: 8px;
-  min-height: 150px;
   box-shadow: 1px 1px 2px 0px rgba(0,0,0,0.5);
 }
 .columna1{
@@ -247,7 +244,6 @@ display: block;
     font-size: smaller;
   }
   .box-perfil{
-    margin-top: 38px;
     display: flex;
     justify-content: space-evenly;
     
@@ -265,7 +261,6 @@ display: block;
   .box-perfil{
     display: flex;
     justify-content: space-evenly;
-    padding-top: 30px;
   }
   .boxSeguidores{
     display: none;
