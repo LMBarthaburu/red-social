@@ -10,6 +10,13 @@ const getData=()=>{
 }
 getData()
 
+const getSeguidores =()=>{
+  const numSeguidores = localStorage.getItem('seguidores')
+  const seguidores = document.getElementById('numero-seguidores')
+  seguidores.innerHTML= `${numSeguidores}`
+ }
+ getSeguidores()
+
 const openMenu=()=>{
   const menu = document.getElementById('menu')
   const contenedor = document.getElementById('contenedor')
