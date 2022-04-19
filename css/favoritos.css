@@ -170,3 +170,20 @@ h5{
   }
 }
 
+/* CHAT */
+
+.image-perfil-chat{
+  width: 25%;
+  height: 90%;
+}
+
+.name-style-chat{
+  margin: 10px;
+  font-size: small;
+}
+
+@media (max-width: 768px){
+  .chat-info{
+    width: 170px;
+  }
+}
